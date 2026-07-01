@@ -1,3 +1,11 @@
+//Import own components
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from '@/components/ui/accordion';
+
 export const FaqSection = () => {
   return (
     <section className="py-24 bg-surface-container-lowest" id="faq">
@@ -8,14 +16,23 @@ export const FaqSection = () => {
           </h2>
         </div>
         <div className="max-w-3xl mx-auto space-y-4">
-          <div className="border border-surface-container-high rounded-lg overflow-hidden">
-            <button className="w-full flex justify-between items-center p-6 text-left bg-surface hover:bg-surface-container-low transition-colors group">
-              <span className="font-semibold text-on-surface">¿Qué es Axil?</span>
-              <span className="material-symbols-outlined text-primary transition-transform group-active:rotate-45">
-                add
-              </span>
-            </button>
-          </div>
+          <Accordion
+            defaultValue={['shipping']}
+            className="border border-surface-container-high rounded-lg overflow-hidden"
+          >
+            <AccordionItem
+              value="shipping"
+              className="w-full p-6 py-4 text-left bg-surface hover:bg-surface-container-low transition-colors group"
+            >
+              <AccordionTrigger className="font-semibold text-on-surface">
+                ¿Qué es Axil?
+              </AccordionTrigger>
+              <AccordionContent>
+                We offer standard (5-7 days), express (2-3 days), and overnight shipping. Free
+                shipping on international orders.
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
 
           <div className="border border-surface-container-high rounded-lg overflow-hidden">
             <button className="w-full flex justify-between items-center p-6 text-left bg-surface hover:bg-surface-container-low transition-colors group">

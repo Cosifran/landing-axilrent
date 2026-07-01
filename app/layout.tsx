@@ -1,8 +1,11 @@
 import type { Metadata, Viewport } from 'next';
-import { Hanken_Grotesk, Inter } from 'next/font/google';
+import { Hanken_Grotesk, Inter, Geist } from 'next/font/google';
 import './globals.css';
 import { Nav } from './_components/nav/nav';
 import { Footer } from './_components/footer/footer';
+import { cn } from '@/lib/utils';
+
+const geist = Geist({ subsets: ['latin'], variable: '--font-sans' });
 
 const hankenGrotesk = Hanken_Grotesk({
   variable: '--font-hanken-grotesk',
@@ -33,7 +36,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es" className={`${hankenGrotesk.variable} ${inter.variable} scroll-smooth`}>
+    <html
+      lang="es"
+      className={cn(
+        'scroll-smooth',
+        hankenGrotesk.variable,
+        inter.variable,
+        'font-sans',
+        geist.variable,
+      )}
+    >
       {/* eslint-disable-next-line @next/next/no-page-custom-font */}
       <link
         rel="stylesheet"
