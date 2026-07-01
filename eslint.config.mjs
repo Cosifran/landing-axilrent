@@ -12,6 +12,9 @@ const eslintConfig = defineConfig([
     'out/**',
     'build/**',
     'next-env.d.ts',
+    // Project-level ignores: SDD artifacts and design docs (markdown, not source).
+    'openspec/**',
+    'DESIGN.md',
   ]),
 ]);
 

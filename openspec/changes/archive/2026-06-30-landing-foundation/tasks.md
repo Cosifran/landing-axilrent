@@ -118,11 +118,11 @@ Steps:
 - **Commit**: `chore: verify landing-foundation quality gates`
 
 Steps:
-- [ ] 5.1 Run `pnpm tsc --noEmit` → exit 0
-- [ ] 5.2 Run `pnpm lint` → exit 0
-- [ ] 5.3 Run `pnpm format` to ensure Prettier compliance
-- [ ] 5.4 Run token count checks: 47 colors, 6 text bases, 6 radii, 7 spacing, 2 shadows
-- [ ] 5.5 Verify `@import "tailwindcss"` present, no `@tailwind` directives
-- [ ] 5.6 Manual browser test: `pnpm dev` → `localhost:3000` → Nav visible, glassmorphic bg, mobile menu toggles at 375px, scroll-shadow activates >20px, placeholder centered
-- [ ] 5.7 Verify `apartment` icon renders (not fallback □)
-- [ ] 5.8 Final commit if formatting changes applied
+- [x] 5.1 Run `pnpm tsc --noEmit` → exit 0
+- [x] 5.2 Run `pnpm lint` → exit 0
+- [x] 5.3 Run `pnpm format` to ensure Prettier compliance
+- [x] 5.4 Run token count checks: 47 colors, 6 text bases, 6 radii, 7 spacing, 2 shadows
+- [x] 5.5 Verify `@import "tailwindcss"` present, no `@tailwind` directives
+- [x] 5.6 Manual browser test: `pnpm dev` → `localhost:3000` → Nav visible, glassmorphic bg, mobile menu toggles at 375px, scroll-shadow activates >20px, placeholder centered
+- [x] 5.7 Verify `apartment` icon renders (not fallback □)
+- [x] 5.8 Final commit (empty verification commit; no formatting changes needed)

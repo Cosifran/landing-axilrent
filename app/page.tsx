@@ -1,12 +1,21 @@
+//Import own components
+import { Hero } from './_components/hero/hero';
+import { PollSection } from './_components/poll-section/poll-section';
+import { SixProblemSection } from './_components/six-problem-section/six-problem-section';
+import { FunctionsAxilSection } from './_components/functions-axil-section/functions-axil-section';
+import { WhyChooseAxilSection } from './_components/why-choose-axil/why-choose-axil';
+import { FaqSection } from './_components/faq/faq';
+import { ContactSection } from './_components/contact/contact';
 export default function Home() {
   return (
-    <main className="flex min-h-screen items-center justify-center pt-32">
-      <section className="rounded-xl border border-outline-variant bg-surface-container-lowest p-8 text-center shadow-ambient">
-        <h1 className="mb-stack-sm font-hanken text-headline-lg text-on-surface">Próximamente</h1>
-        <p className="text-body-md text-on-surface-variant">
-          Estamos construyendo la nueva experiencia de Axil.
-        </p>
-      </section>
+    <main className="bg-background text-on-background font-body-md antialiased selection:bg-primary-container selection:text-on-primary-container">
+      <Hero />
+      <PollSection />
+      <SixProblemSection />
+      <FunctionsAxilSection />
+      <WhyChooseAxilSection />
+      <FaqSection />
+      <ContactSection />
     </main>
   );
 }

@@ -2,7 +2,6 @@ import Link from 'next/link';
 import { MobileMenuToggle } from './mobile-menu-toggle';
 import { cn } from '@/lib/utils';
 
-// TODO: nav labels are placeholders pending section confirmation
 const navLinks = [
   { href: '#problema', label: 'Problema' },
   { href: '#soluciones', label: 'Soluciones' },

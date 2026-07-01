@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next';
 import { Hanken_Grotesk, Inter } from 'next/font/google';
 import './globals.css';
 import { Nav } from './_components/nav/nav';
+import { Footer } from './_components/footer/footer';
 
 const hankenGrotesk = Hanken_Grotesk({
   variable: '--font-hanken-grotesk',
@@ -33,7 +34,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es" className={`${hankenGrotesk.variable} ${inter.variable} scroll-smooth`}>
-      {/* Material Symbols Outlined is not exposed by next/font/google in Next.js 16.2.9; load via Google Fonts CDN. */}
       {/* eslint-disable-next-line @next/next/no-page-custom-font */}
       <link
         rel="stylesheet"
@@ -42,6 +42,7 @@ export default function RootLayout({
       <body className="min-h-screen font-inter text-on-surface antialiased">
         <Nav />
         {children}
+        <Footer />
       </body>
     </html>
   );
